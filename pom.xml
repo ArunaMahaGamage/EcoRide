@@ -8,6 +8,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>24</maven.compiler.release>
-        <exec.mainClass>com.K2600143.ecoride.K2600143_EcoRideSystem</exec.mainClass>
+        <exec.mainClass>com.k2600143.ecoride.EcoRideSystem</exec.mainClass>
     </properties>
 </project>

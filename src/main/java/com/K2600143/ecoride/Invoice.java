@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.K2600143.ecoride;
+package com.k2600143.ecoride;
 
 /**
  *
  * @author arunagamage
  */
-public class K2600143_Invoice {
-    private K2600143_Reservation reservation;
+public class Invoice {
+    private Reservation reservation;
     private double basePrice, discount, tax, finalAmount;
 
-    public K2600143_Invoice(K2600143_Reservation reservation) {
+    public Invoice(Reservation reservation) {
         this.reservation = reservation;
     }
 

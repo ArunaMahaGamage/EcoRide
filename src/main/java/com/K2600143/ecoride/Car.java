@@ -1,4 +1,4 @@
-package com.K2600143.ecoride;
+package com.k2600143.ecoride;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,14 +10,14 @@ package com.K2600143.ecoride;
  * @author arunagamage
  */
 
-public class K2600143_Car {
+public class Car {
     private String carId;
     private String model;
     private String category;
     private double dailyRate;
     private String availability;
 
-    public K2600143_Car(String carId, String model, String category, double dailyRate) {
+    public Car(String carId, String model, String category, double dailyRate) {
         this.carId = carId;
         this.model = model;
         this.category = category;

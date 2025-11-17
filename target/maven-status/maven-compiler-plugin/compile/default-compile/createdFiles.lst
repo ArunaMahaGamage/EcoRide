@@ -1,5 +1,5 @@
-com/K2600143/ecoride/K2600143_Customer.class
-com/K2600143/ecoride/K2600143_Invoice.class
-com/K2600143/ecoride/K2600143_Car.class
-com/K2600143/ecoride/K2600143_EcoRideSystem.class
-com/K2600143/ecoride/K2600143_Reservation.class
+com/K2600143/ecoride/Reservation.class
+com/K2600143/ecoride/EcoRideSystem.class
+com/K2600143/ecoride/Customer.class
+com/K2600143/ecoride/Car.class
+com/K2600143/ecoride/Invoice.class
