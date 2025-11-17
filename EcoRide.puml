@@ -1,0 +1,83 @@
+@startuml
+title EcoRide System Class Diagram
+
+package com.K2600143.ecoride {
+
+    class K2600143_Car {
+        - String carId
+        - String model
+        - String category
+        - double dailyRate
+        - String availability
+
+        + K2600143_Car(String carId, String model, String category, double dailyRate)
+        + String getCarId()
+        + String getModel()
+        + String getCategory()
+        + double getDailyRate()
+        + String getAvailability()
+        + void updateAvailability(String status)
+        + String getDetails()
+    }
+
+    class K2600143_Customer {
+        - String nicOrPassport
+        - String name
+        - String contact
+        - String email
+
+        + K2600143_Customer(String nicOrPassport, String name, String contact, String email)
+        + String getName()
+        + void displayInfo()
+    }
+
+    class K2600143_Reservation {
+        - String reservationId
+        - K2600143_Customer customer
+        - K2600143_Car car
+        - LocalDate startDate
+        - LocalDate endDate
+        - double totalKm
+        - double deposit = 5000
+
+        + K2600143_Reservation(String reservationId, K2600143_Customer customer, K2600143_Car car,
+                               LocalDate startDate, LocalDate endDate, double totalKm)
+        + long calculateDays()
+        + K2600143_Customer getCustomer()
+        + K2600143_Car getCar()
+        + double getDeposit()
+    }
+
+    class K2600143_Invoice {
+        - K2600143_Reservation reservation
+        - double basePrice
+        - double discount
+        - double tax
+        - double finalAmount
+
+        + K2600143_Invoice(K2600143_Reservation reservation)
+        + void calculateInvoice()
+        + void printInvoice()
+    }
+
+    class K2600143_EcoRideSystem {
+        - ArrayList<K2600143_Car> cars
+        - ArrayList<K2600143_Customer> customers
+        - ArrayList<K2600143_Reservation> reservations
+
+        + void addCar(K2600143_Car car)
+        + void makeReservation(String id, K2600143_Customer cust, K2600143_Car car,
+                               LocalDate start, LocalDate end, double km)
+        + static void main(String[] args)
+    }
+
+    ' --- Relationships ---
+    K2600143_Reservation --> K2600143_Customer : has
+    K2600143_Reservation --> K2600143_Car : has
+    K2600143_Invoice --> K2600143_Reservation : based on
+    K2600143_EcoRideSystem --> K2600143_Car : manages
+    K2600143_EcoRideSystem --> K2600143_Customer : manages
+    K2600143_EcoRideSystem --> K2600143_Reservation : manages
+}
+
+@enduml

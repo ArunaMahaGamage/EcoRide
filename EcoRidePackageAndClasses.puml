@@ -1,0 +1,12 @@
+@startuml
+class com.K2600143.ecoride.K2600143_Car
+class com.K2600143.ecoride.K2600143_Customer
+class com.K2600143.ecoride.K2600143_EcoRideSystem
+class com.K2600143.ecoride.K2600143_Invoice
+class com.K2600143.ecoride.K2600143_Reservation
+class java.time.LocalDate
+class java.time.temporal.ChronoUnit
+com.K2600143.ecoride.K2600143_EcoRideSystem ..> java.time.LocalDate
+com.K2600143.ecoride.K2600143_Reservation ..> java.time.LocalDate
+com.K2600143.ecoride.K2600143_Reservation ..> java.time.temporal.ChronoUnit
+@enduml

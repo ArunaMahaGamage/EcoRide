@@ -1,0 +1,42 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+--no-fonts
+-encoding
+'UTF-8'
+-protected
+--release
+24
+-sourcepath
+'/Users/arunagamage/NetBeansProjects/EcoRide/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'EcoRide 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'EcoRide 1.0-SNAPSHOT API'
+com.K2600143.ecoride
+/Users/arunagamage/NetBeansProjects/EcoRide/src/main/java = 1762323865047
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/tag-search-index.js = 1762444919370
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/overview-tree.html = 1762444919365
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/module-search-index.js = 1762444919369
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/index.html = 1762444919374
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/package-search-index.js = 1762444919369
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/index-all.html = 1762444919373
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/allpackages-index.html = 1762444919369
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/member-search-index.js = 1762444919370
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/help-doc.html = 1762444919375
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/element-list = 1762444919352
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/search.html = 1762444919374
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/allclasses-index.html = 1762444919368
+/Users/arunagamage/NetBeansProjects/EcoRide/target/reports/apidocs/type-search-index.js = 1762444919369
