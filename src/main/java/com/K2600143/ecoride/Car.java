@@ -17,13 +17,33 @@ public class Car {
     private double dailyRate;
     private String availability;
 
-    public Car(String carId, String model, String category, double dailyRate) {
+    public void setCarId(String carId) {
         this.carId = carId;
-        this.model = model;
-        this.category = category;
-        this.dailyRate = dailyRate;
-        this.availability = "Available";
     }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setDailyRate(double dailyRate) {
+        this.dailyRate = dailyRate;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
+    }
+
+//    public Car(String carId, String model, String category, double dailyRate) {
+//        this.carId = carId;
+//        this.model = model;
+//        this.category = category;
+//        this.dailyRate = dailyRate;
+//        this.availability = "Available";
+//    }
 
     public String getCarId() { return carId; }
     public String getModel() { return model; }

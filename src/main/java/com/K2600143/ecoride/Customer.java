@@ -14,12 +14,28 @@ public class Customer {
     private String contact;
     private String email;
 
-    public Customer(String nicOrPassport, String name, String contact, String email) {
+    public void setNicOrPassport(String nicOrPassport) {
         this.nicOrPassport = nicOrPassport;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
     }
+
+//    public Customer(String nicOrPassport, String name, String contact, String email) {
+//        this.nicOrPassport = nicOrPassport;
+//        this.name = name;
+//        this.contact = contact;
+//        this.email = email;
+//    }
 
     public String getName() { return name; }
 

@@ -16,6 +16,8 @@ public class EcoRideSystem {
     private ArrayList<Car> cars = new ArrayList<>();
     private ArrayList<Customer> customers = new ArrayList<>();
     private ArrayList<Reservation> reservations = new ArrayList<>();
+    
+    private static int carId = 1;
 
     public void addCar(Car car) {
         cars.add(car);
@@ -30,58 +32,65 @@ public class EcoRideSystem {
         Reservation res = new Reservation(id, cust, car, start, end, km);
         reservations.add(res);
         car.updateAvailability("Reserved");
-        System.out.println("Reservation Created: " + id);
+        System.out.println("\nReservation Created: " + id + "\n");
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
         EcoRideSystem system = new EcoRideSystem();
 
-        Car car1 = new Car("Car001", "Toyota Aqua", "Hybrid", 8000);
-        system.addCar(car1);
+        Car car = new Car();
+        car.setCarId("Car00" + carId);
+        
+        System.out.println("=== Enter Car Model ===");
+        System.out.println("Eg :: Toyota Aqua");
+        String model = scanner.nextLine().trim();
+        car.setModel(model);
+        
+        System.out.println("=== Enter Car Category ===");
+        System.out.println("Eg :: Compact Petrol," +" Hybrid," +" Electric," +" Luxury SUV ");
+        String category = scanner.nextLine().trim();
+        car.setCategory(category);
+        
+        try {
+            System.out.println("=== Enter Car Daily Rate ===");
+            System.out.println("Daily Rentals :: Compact Petrol Car : LKR 5,000, Hybrid Car	LKR 7,500, Electric Car	LKR 10,000, Luxury SUV	LKR 15,000");
+            System.out.println("Eg :: Value Should Be double");
+            String dailyRate = scanner.nextLine().trim();
+            double rate = Double.parseDouble(dailyRate);
+            car.setDailyRate(rate);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number. Please try again.");
+        }
+        car.setAvailability("Available");
+        
+        System.out.println("\n\nEnter Customer Details\n");
 
-        Customer customer1 = new Customer("893043450V", "Aruna Gamage", "0716639721", "aruna@gmail.com");
+        system.addCar(car);
 
-        system.makeReservation("R001", customer1, car1, LocalDate.now().plusDays(3), LocalDate.now().plusDays(10), 250);
+        Customer customer = new Customer();
+        System.out.println("Enter Customer Name");
+        String name = scanner.nextLine().trim();
+        customer.setName(name);
+        
+        System.out.println("Enter Customer NIC or Passport");
+        String nicOrPassport = scanner.nextLine().trim();
+        customer.setNicOrPassport(nicOrPassport);
+        
+        System.out.println("==Enter Customer Telephone Number==");
+        String contact = scanner.nextLine().trim();
+        customer.setContact(contact);
+        
+        System.out.println("Enter Customer Email Address");
+        String email = scanner.nextLine().trim();
+        customer.setEmail(email);
+
+        system.makeReservation("R001", customer, car, LocalDate.now().plusDays(3), LocalDate.now().plusDays(10), 250);
 
         Invoice invoice1 = new Invoice(system.reservations.get(0));
         invoice1.calculateInvoice();
         invoice1.printInvoice();
-        
-        EcoRideSystem system2 = new EcoRideSystem();
-        Car car2 = new Car("Car002", "Nissan Leaf", "Hybrid", 10000);
-        system2.addCar(car2);
-
-        Customer customer2 = new Customer("893043450V", "Saman Perera", "0773212346", "aruna@gmail.com");
-
-        system2.makeReservation("R002", customer2, car2, LocalDate.now().plusDays(3), LocalDate.now().plusDays(10), 250);
-
-        Invoice invoice2 = new Invoice(system2.reservations.get(0));
-        invoice2.calculateInvoice();
-        invoice2.printInvoice();
-        
-        EcoRideSystem system3 = new EcoRideSystem();
-        Car car3 = new Car("Car003", "BMW X5", "Luxury SUV", 15000);
-        system3.addCar(car3);
-
-        Customer customer3 = new Customer("893043450V", "Kamal Perera", "0773212346", "aruna@gmail.com");
-
-        system3.makeReservation("R003", customer3, car3, LocalDate.now().plusDays(3), LocalDate.now().plusDays(10), 250);
-
-        Invoice invoice3 = new Invoice(system3.reservations.get(0));
-        invoice3.calculateInvoice();
-        invoice3.printInvoice();
-        
-        EcoRideSystem system4 = new EcoRideSystem();
-        Car car4 = new Car("Car004", "BMW X5", "Compact Petrol", 5000);
-        system4.addCar(car4);
-
-        Customer customer4 = new Customer("893043450V", "Nimal Perera", "0773212346", "aruna@gmail.com");
-
-        system4.makeReservation("R004", customer4, car4, LocalDate.now().plusDays(3), LocalDate.now().plusDays(10), 250);
-
-        Invoice invoice4 = new Invoice(system4.reservations.get(0));
-        invoice4.calculateInvoice();
-        invoice4.printInvoice();
     }
 }
 
