@@ -4,31 +4,41 @@ title EcoRide System Class Diagram
 package com.K2600143.ecoride {
 
     class K2600143_Car {
-        - String carId
-        - String model
-        - String category
-        - double dailyRate
-        - String availability
+        - carId : String
+        - model : String
+        - category : String
+        - dailyRate : double
+        - availability : String
 
-        + K2600143_Car(String carId, String model, String category, double dailyRate)
-        + String getCarId()
-        + String getModel()
-        + String getCategory()
-        + double getDailyRate()
-        + String getAvailability()
-        + void updateAvailability(String status)
-        + String getDetails()
+        + setCarId(carId : String) : void
+        + setModel(model : String) : void
+        + setCategory(category : String) : void
+        + setDailyRate(dailyRate : double) : void
+        + setAvailability(availability : String) : void
+
+        + getCarId() : String
+        + getModel() : String
+        + getCategory() : String
+        + getDailyRate() : double
+        + getAvailability() : String
+
+        + updateAvailability(status : String) : void
+        + getDetails() : String
     }
 
     class K2600143_Customer {
-        - String nicOrPassport
-        - String name
-        - String contact
-        - String email
+        - nicOrPassport : String
+        - name : String
+        - contact : String
+        - email : String
 
-        + K2600143_Customer(String nicOrPassport, String name, String contact, String email)
-        + String getName()
-        + void displayInfo()
+        + setNicOrPassport(nicOrPassport : String) : void
+        + setName(name : String) : void
+        + setContact(contact : String) : void
+        + setEmail(email : String) : void
+
+        + getName() : String
+        + displayInfo() : void
     }
 
     class K2600143_Reservation {
@@ -47,6 +57,7 @@ package com.K2600143.ecoride {
         + K2600143_Car getCar()
         + double getDeposit()
     }
+
 
     class K2600143_Invoice {
         - K2600143_Reservation reservation
