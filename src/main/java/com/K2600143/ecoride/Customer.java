@@ -30,13 +30,6 @@ public class Customer {
         this.email = email;
     }
 
-//    public Customer(String nicOrPassport, String name, String contact, String email) {
-//        this.nicOrPassport = nicOrPassport;
-//        this.name = name;
-//        this.contact = contact;
-//        this.email = email;
-//    }
-
     public String getName() { return name; }
 
     public void displayInfo() {

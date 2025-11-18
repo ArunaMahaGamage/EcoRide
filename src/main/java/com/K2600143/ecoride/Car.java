@@ -37,13 +37,6 @@ public class Car {
         this.availability = availability;
     }
 
-//    public Car(String carId, String model, String category, double dailyRate) {
-//        this.carId = carId;
-//        this.model = model;
-//        this.category = category;
-//        this.dailyRate = dailyRate;
-//        this.availability = "Available";
-//    }
 
     public String getCarId() { return carId; }
     public String getModel() { return model; }
